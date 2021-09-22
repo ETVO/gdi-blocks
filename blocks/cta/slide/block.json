@@ -1,0 +1,38 @@
+{
+    "slug": "slide",
+    "title": "Slide",
+    "desc": "Slide para CTA",
+    "icon": " bi bi-flag",
+    "categ": "gdiblock",
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "bgImage": {
+            "type": "string"
+        },
+        "link": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"        
+        },
+        {
+            "tag": "input",
+            "type": "image",
+            "attr": "bgImage",
+            "label": "Imagem de fundo"
+        },
+        {
+            "tag": "input",
+            "type": "url",
+            "attr": "link",
+            "label": "Link do botão"  
+        }
+    ]
+}

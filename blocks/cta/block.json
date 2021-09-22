@@ -1,0 +1,41 @@
+{
+    "slug": "cta",
+    "title": "CTA",
+    "desc": "CTA com texto e ação",
+    "icon": " bi bi-flag-fill",
+    "categ": "gdiblock",
+    "usesInner": true,
+    "attrs": {
+        "interval": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Opções"
+        },
+        {
+            "tag": "input",
+            "type": "number",
+            "attr": "interval",
+            "label": "Intervalo de animação",
+            "description": "Insira '0' para desativar animação"
+        },
+        {
+            "tag": "title",
+            "title": "Slides"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "gdiblock/slide" ],
+            "label": "Slides"
+        }
+    ],
+    "children": [
+        {
+            "path": "slide/"
+        }
+    ]
+}

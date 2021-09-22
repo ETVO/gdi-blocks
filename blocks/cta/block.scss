@@ -1,0 +1,56 @@
+@import './slide/block.scss';
+
+$control-icon-size: 14px;
+
+.gdi-cta {
+    .carousel-control {
+        &-prev, 
+        &-next {
+            position: relative;
+            top: unset;
+            bottom: unset;
+            left: unset;
+            right: unset;
+
+            width: 40px;
+            height: 25px;
+            opacity: 1;
+            border-radius: 5px;
+            
+            background-color: rgba(255, 255, 255, .8);
+            transition: background-color .2s ease;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 1);
+            }
+
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                // width: $control-icon-size;
+                // height: $control-icon-size;
+
+                opacity: 1;
+                
+                font-size: $control-icon-size;
+                color: #010C2A !important;
+                font-family: bootstrap-icons;
+                font-weight: bolder;
+
+                background-image: none;
+                
+                display: flex;
+            }
+
+            .carousel-control-prev-icon::before {    
+                content: "\f284";
+                margin: auto;            
+            }
+
+            .carousel-control-next-icon::before {
+                content: "\f285";            
+                margin: auto;
+            }
+
+        }
+    }
+}
