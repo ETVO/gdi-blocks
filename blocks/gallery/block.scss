@@ -1,9 +1,48 @@
+@import './modal';
+
 .gdi-gallery {
-    
+    .items {
+        .item {
+            position: relative;
+            
+            cursor: help;
+
+            img {
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+
+            }
+            &.feat {
+                img {
+                    height: 100%;    
+                }
+            }
+
+            .img-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                font-size: .9rem;
+                padding: 10px 20px;
+
+                opacity: 0;
+                transition: opacity .2s;
+            }
+
+            &:hover, &:active, &:focus {
+                
+                .img-overlay {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
 
 @media all and (max-width:1199.99px) {
-    
 }
 
 @media all and (max-width:991.99px) {
@@ -11,9 +50,9 @@
 }
 
 @media all and (max-width:767.99px) {
-    
+
 }
 
 @media all and (max-width:575.99px) {
-
+    
 }

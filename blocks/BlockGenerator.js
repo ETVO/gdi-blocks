@@ -248,8 +248,6 @@ import data from "./blocks.json";
 
             const value = attributes[attr] ?? element.value;
 
-            console.log('value', value);
-
             var inputContent = <Fragment></Fragment>;
 
             if (type == "text") {

@@ -25,6 +25,9 @@
         },
         {
             "path": "./gallery/"
+        },
+        {
+            "path": "./slider/"
         }
     ]
 }

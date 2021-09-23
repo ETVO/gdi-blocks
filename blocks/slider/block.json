@@ -1,0 +1,24 @@
+{
+    "slug": "slider",
+    "title": "Fotos",
+    "desc": "Fotos",
+    "icon": " bi bi-code",
+    "categ": "gdiblock",
+    "attrs": {
+        "images": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Imagens"
+        },
+        {
+            "tag": "input",
+            "type": "gallery",
+            "attr": "images",
+            "label": "Galeria"
+        }
+    ]
+}
