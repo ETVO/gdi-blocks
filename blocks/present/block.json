@@ -1,0 +1,47 @@
+{
+    "slug": "present",
+    "title": "Apresentação",
+    "desc": "Apresentação com título, texto e contato",
+    "icon": " bi bi-eye-fill",
+    "categ": "gdiblock",
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "showContacts": {
+            "type": "bool"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"
+        },
+        {
+            "tag": "input",
+            "type": "textarea",
+            "attr": "description",
+            "label": "Descrição",
+            "description": "Deixe em branco para ocultar"
+        },
+        {
+            "tag": "title",
+            "title": "Opções"
+        },
+        {
+            "tag": "input",
+            "type": "check",
+            "attr": "showContacts",
+            "label": "Exibir ícones de contato?"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "slug": "citem",
+    "title": "Slide Carrossel",
+    "desc": "Slide para Carrossel",
+    "icon": " bi bi-square",
+    "categ": "gdiblock",
+    "attrs": {
+        "image": {
+            "type": "string"
+        },
+        "caption": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "label": "Conteúdo"        
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "caption",
+            "label": "Legenda"
+        },
+        {
+            "tag": "title",
+            "label": "Imagem"        
+        },
+        {
+            "tag": "input",
+            "type": "image",
+            "attr": "image",
+            "label": "Imagem"
+        }
+    ]
+}

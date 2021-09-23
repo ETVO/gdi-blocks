@@ -1,9 +1,18 @@
 {
     "category": "GDI Blocks",
-    "startCollapsed": false,
+    "startCollapsed": true,
     "blocks": [
         {
             "path": "./cta/"
+        },
+        {
+            "path": "./present/"
+        },
+        {
+            "path": "./sobre/"
+        },
+        {
+            "path": "./carousel/"
         }
     ]
 }

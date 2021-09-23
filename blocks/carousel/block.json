@@ -1,0 +1,41 @@
+{
+    "slug": "carousel",
+    "title": "Nossos Valores",
+    "desc": "Carrossel de imagens com legenda",
+    "icon": " bi bi-code-square",
+    "categ": "gdiblock",
+    "usesInner": true,
+    "attrs": {
+        "interval": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Opções"
+        },
+        {
+            "tag": "input",
+            "type": "number",
+            "attr": "interval",
+            "label": "Intervalo de animação",
+            "description": "Insira '0' para desativar animação"
+        },
+        {
+            "tag": "title",
+            "title": "Slides"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "gdiblock/citem" ],
+            "label": "Slides"
+        }
+    ],
+    "children": [
+        {
+            "path": "citem/"
+        }
+    ]
+}

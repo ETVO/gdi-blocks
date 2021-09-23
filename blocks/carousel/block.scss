@@ -1,0 +1,65 @@
+@import './citem/block.scss';
+
+$control-icon-size: 20px;
+
+.gdi-carousel {
+    padding-left: 250px;
+    padding-right: 250px;
+    .carousel {
+        position: relative;
+        
+        .carousel-control {
+            &-prev,
+            &-next {
+                width: 40px;
+                top: 50%;
+                bottom: 50%;
+
+                opacity: 1;
+
+                .carousel-control-next-icon,
+                .carousel-control-prev-icon {
+
+                    width: 40px;
+                    height: 40px;
+                    
+                    background-color: #e4e7f0ff;
+                    transition: background-color .2s ease;
+
+                    opacity: 1;
+                    
+                    font-size: $control-icon-size;
+                    color: #010c2a !important;
+                    font-family: bootstrap-icons;
+                    font-weight: bolder;
+
+                    background-image: none;
+                    
+                    display: flex;
+                }
+
+                .carousel-control-prev-icon::before {    
+                    content: "\f284";
+                    -webkit-text-stroke: 1px #010c2a;
+                    margin: auto;            
+                }
+
+                .carousel-control-next-icon::before {
+                    content: "\f285";            
+                    -webkit-text-stroke: 1px #010c2a;
+                    margin: auto;
+                }
+            }
+    
+            &-prev {
+                left: -50px;
+            }
+    
+            &-next {
+                right: -50px;
+            }
+
+            
+        }   
+    }
+}

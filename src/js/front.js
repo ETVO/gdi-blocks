@@ -40,7 +40,7 @@
                 // Don't generate indicators if it already has them 
                 // OR if it has them disabled
                 var addIndicators = !$(this).find(".carousel-indicators") 
-                    && $(this).attr("data-emertech-indicators") != "false";
+                    && $(this).attr("data-custom-indicators") != "false";
 
                 var $items = $(this).find(".carousel-item");
 
