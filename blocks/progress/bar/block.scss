@@ -1,0 +1,32 @@
+.gdi-bar {
+    .caption {
+        color: #010c2a;
+        font-weight: 600;
+    }
+    .progbar {
+        height: 15px;
+        background-color: #e4e7f0;
+
+        .prog {
+            .prog-color {
+                height: 100%;
+                display: block;
+                background-color: #f1a21e;
+
+                animation: fillProg ease 2s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes fillProg {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

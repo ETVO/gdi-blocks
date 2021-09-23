@@ -2,21 +2,31 @@
 
 function render_block_slider($attributes)
 {
-    $title = $attributes['title'];
     $images = $attributes['images'];
+    $title = $attributes['title'];
+
+    $title_class = 'thin-title';
+    if($title != '') {
+        $title_class = 'title';
+    }
+    else {
+        $title = 'Fotos do Empreendimento';
+    }
 
     $sliderId = 'gdiSlider' . rand(0, 100);
 
     ob_start(); // Start HTML buffering
+
+    if($images):
     ?>
 
-        <section class="gdi-slider py-3">
+        <section class="gdi-slider py-4">
 
-            <div class="container py-5">
+            <div class="container pt-4">
 
-                <div class="thin-title text-center mb-3">
+                <div class="<?php echo $title_class ?> text-center mb-4">
                     <h2>
-                        Características do<br>Empreendimento
+                        <?php echo $title; ?>
                     </h2>
                 </div>
 
@@ -37,7 +47,8 @@ function render_block_slider($attributes)
                                     
                                     ?>
 
-                                        <div class="item">
+                                        <div class="item" 
+                                        data-gdi-parent="#<?php echo $sliderId; ?>">
                                             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['caption']; ?>"/>
                                         </div>
 
@@ -59,6 +70,7 @@ function render_block_slider($attributes)
         </section>
 
     <?php
+    endif;
 
     $output = ob_get_contents(); // collect buffered contents
 

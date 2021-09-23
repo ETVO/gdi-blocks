@@ -21,7 +21,7 @@
             "type": "textarea",
             "attr": "icon",
             "label": "Ícone SVG",
-            "description": "AVISO: Não altere este campo se não souber o que está fazendo."        
+            "help": "AVISO: Não altere este campo se não souber o que está fazendo."        
         },
         {
             "tag": "input",

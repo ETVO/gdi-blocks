@@ -2,10 +2,20 @@ $img-size: 400px;
 
 .gdi-slider {
 
+    .title h2 {
+        font-size: 1.25rem !important;
+        letter-spacing: 2.2px;
+        color: #777E8E;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
     .slider-wrap {
+        position: relative;
         .control-button {
             margin: auto 20px;
-            display: block;
+            position: absolute;
+            bottom: 50%;
 
             &.prev {
                 left: 0;
@@ -17,6 +27,8 @@ $img-size: 400px;
 
 
             button {
+                position: relative;
+                z-index: 1000;
                 display: block;
 
                 background-color: transparent;
@@ -55,21 +67,29 @@ $img-size: 400px;
                 justify-content: center;
                 align-content: flex-start;
 
+                // transition: left .2s; 
+
                 .item {
                     position: relative;
 
                     margin: 0 10px;
 
-                    width: $img-size;
-                    height: $img-size;
+                    max-width: $img-size;
+                    max-height: $img-size;
 
                     justify-content: center;
                     align-items: center;
                     overflow: hidden;
                     display: flex;
-                    box-sizing: border-box;
 
                     border-radius: 5px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                    }
 
                 }
             }

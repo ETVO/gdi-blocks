@@ -5,6 +5,8 @@
  * @subpackage GDI-Blocks
  */
 
+import './components/slider';
+
  (jQuery)(
     function($) {
 

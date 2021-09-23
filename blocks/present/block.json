@@ -31,7 +31,7 @@
             "type": "textarea",
             "attr": "description",
             "label": "Descrição",
-            "description": "Deixe em branco para ocultar"
+            "help": "Deixe em branco para ocultar"
         },
         {
             "tag": "title",

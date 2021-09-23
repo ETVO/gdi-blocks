@@ -20,7 +20,7 @@
             "type": "number",
             "attr": "interval",
             "label": "Intervalo de animação",
-            "description": "Insira '0' para desativar animação"
+            "help": "Insira '0' para desativar animação"
         },
         {
             "tag": "title",
