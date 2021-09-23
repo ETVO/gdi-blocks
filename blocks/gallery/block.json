@@ -1,0 +1,24 @@
+{
+    "slug": "gallery",
+    "title": "Características",
+    "desc": "Imagens e legendas",
+    "icon": " bi bi-grid-1x2-fill",
+    "categ": "gdiblock",
+    "attrs": {
+        "images": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Imagens"
+        },
+        {
+            "tag": "input",
+            "type": "gallery",
+            "attr": "images",
+            "label": "Galeria"
+        }
+    ]
+}

@@ -16,6 +16,15 @@
         },
         {
             "path": "./cards/"
+        },
+        {
+            "path": "./ctafixed/"
+        },
+        {
+            "path": "./resumo/"
+        },
+        {
+            "path": "./gallery/"
         }
     ]
 }

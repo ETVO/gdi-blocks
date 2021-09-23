@@ -1,0 +1,59 @@
+{
+    "slug": "ctafixed",
+    "title": "CTA Contato",
+    "desc": "CTA Página de Empreendimento",
+    "icon": " bi bi-flag",
+    "categ": "gdiblock",
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "subtitle": {
+            "type": "string"
+        },
+        "bgImage": {
+            "type": "string"
+        },
+        "link": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "label": "Conteúdo"        
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"        
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "subtitle",
+            "label": "Subtítulo"        
+        },
+        {
+            "tag": "title",
+            "label": "Imagem"        
+        },
+        {
+            "tag": "input",
+            "type": "image",
+            "attr": "bgImage",
+            "label": "Imagem de fundo"
+        },
+        {
+            "tag": "title",
+            "label": "Opções"        
+        },
+        {
+            "tag": "input",
+            "type": "url",
+            "attr": "link",
+            "label": "Link do botão"  
+        }
+    ]
+}
