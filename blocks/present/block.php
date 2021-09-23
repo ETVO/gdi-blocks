@@ -46,7 +46,7 @@ function render_block_present($attributes, $content)
             <div class="container col-lg-10 col-xl-8 px-3">
                 <div class="d-inline d-lg-flex m-auto">
                     <?php if($title): ?>
-                        <div class="title m-auto">
+                        <div class="title m-auto text-center text-lg-start">
                             <h2 class="m-0">
                                 <?php echo $title; ?>
                             </h2>
@@ -62,10 +62,10 @@ function render_block_present($attributes, $content)
                 </div>
                 <?php if($showContacts && count($contacts) > 0): ?>
                     <div class="d-flex mt-4">
-                        <div class="contacts m-auto d-flex">
+                        <div class="contacts m-auto d-flex flex-column flex-sm-row ">
                             
                             <?php foreach ($contacts as $contact) : ?>
-                                <div class="list-item mx-2 d-flex d-sm-block">
+                                <div class="list-item my-1 my-sm-0 mx-sm-2 d-flex d-sm-block">
                                     <div class="d-flex mx-auto">
                                         <a class="icon me-2 text-primary" href="<?php echo $contact['link'] ?>" target="_blank" alt="<?php echo $contact['number']; ?>">
                                             <span class="bi bi-<?php echo $contact['icon'] ?>"></span>
