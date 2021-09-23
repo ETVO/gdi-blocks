@@ -3,8 +3,8 @@
 $control-icon-size: 20px;
 
 .gdi-carousel {
-    padding-left: 250px;
-    padding-right: 250px;
+    padding-left: 40px;
+    padding-right: 40px;
     .carousel {
         position: relative;
         
@@ -61,5 +61,34 @@ $control-icon-size: 20px;
 
             
         }   
+    }
+}
+
+@media all and (max-width:767.99px) {
+    .gdi-carousel .carousel {
+        .controls {
+            display: flex;
+            margin-top: 10px;
+
+            .carousel-control {
+                &-prev,
+                &-next {
+                    position: relative;
+                    top: unset;
+                    bottom: unset;
+                    right: unset;
+                    left: unset;
+                       
+                }
+        
+                &-prev {
+                    margin-left: auto;
+                }
+        
+                &-next {
+                    margin-right: auto;
+                }
+            }
+        } 
     }
 }

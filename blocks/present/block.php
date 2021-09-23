@@ -61,13 +61,13 @@ function render_block_present($attributes, $content)
                     <?php endif; ?>
                 </div>
                 <?php if($showContacts && count($contacts) > 0): ?>
-                    <div class="d-flex mt-3">
+                    <div class="d-flex mt-4">
                         <div class="contacts m-auto d-flex">
                             
                             <?php foreach ($contacts as $contact) : ?>
                                 <div class="list-item mx-2 d-flex d-sm-block">
                                     <div class="d-flex mx-auto">
-                                        <a class="icon me-1 text-primary" href="<?php echo $contact['link'] ?>" target="_blank" alt="<?php echo $contact['number']; ?>">
+                                        <a class="icon me-2 text-primary" href="<?php echo $contact['link'] ?>" target="_blank" alt="<?php echo $contact['number']; ?>">
                                             <span class="bi bi-<?php echo $contact['icon'] ?>"></span>
                                         </a>
                                         <a class="text" href="<?php echo $contact['link'] ?>" target="_blank" alt="<?php echo $contact['number']; ?>">

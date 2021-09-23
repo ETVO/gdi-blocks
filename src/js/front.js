@@ -164,7 +164,7 @@
          * Invocate functions when document.body is ready 
          */
         $(document.body).ready(function (){
-            setSVGViewBox();
+            // setSVGViewBox();
             generateCarousel();
             syncTabsWithContent();
         });

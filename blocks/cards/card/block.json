@@ -1,0 +1,39 @@
+{
+    "slug": "card",
+    "title": "Card Especialidade",
+    "desc": "Ícone, título e descrição de especialidade",
+    "icon": " bi bi-card-text",
+    "categ": "gdiblock",
+    "attrs": {
+        "icon": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "input",
+            "type": "textarea",
+            "attr": "icon",
+            "label": "Ícone SVG",
+            "description": "AVISO: Não altere este campo se não souber o que está fazendo."        
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"        
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "description",
+            "label": "Descrição"        
+        }
+    ]
+}

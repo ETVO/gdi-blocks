@@ -1,0 +1,27 @@
+{
+    "slug": "cards",
+    "title": "Especialidades",
+    "desc": "Cards de especialidades",
+    "icon": " bi bi-arrow-repeat",
+    "categ": "gdiblock",
+    "usesInner": true,
+    "attrs": {
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "label": "Cards"        
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "gdiblock/card" ],
+            "label": "Cards"
+        }
+    ],
+    "children": [
+        {
+            "path": "card/"
+        }
+    ]
+}

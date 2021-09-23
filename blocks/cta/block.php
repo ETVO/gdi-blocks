@@ -6,17 +6,20 @@ function render_block_cta($attributes, $content)
 
     if(empty($interval)) $interval = 3000;  
     
-    if($interval == 0) $auto_slide = false;
-    else $auto_slide = true;
+    if($interval == 0) {
+        $auto_slide = false;
+    }
+    else 
+        $auto_slide = true;
 
     $block_id = 'gdiCTA' . rand(0, 100);
 
     ob_start(); // Start HTML buffering
     ?>
 
-        <section class="gdi-cta carousel slide" 
+        <section class="gdi-cta carousel slide"
             data-bs-ride="<?php echo ($auto_slide) ? "carousel" : "false" ?>" 
-            data-bs-interval="<?php echo ($auto_slide) ? $interval : "" ?>" 
+            <?php echo ($auto_slide) ? 'data-bs-interval="'.$interval.'"' : ""; ?>" 
             id="<?php echo $block_id; ?>">
 
             <div class="carousel-inner">
