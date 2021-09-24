@@ -1,0 +1,41 @@
+.gdi-planta {
+        
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #FFFFFF1A;
+    border: 1px solid #A5B0CC;
+    width: 100%;
+
+    .image {
+        flex: 1 1 auto;
+        padding: 20px;
+        display: flex;
+        
+        img {
+            margin: auto;
+            width: 85%;
+        }
+    }
+
+    .caption {
+        padding: 15px 20px;
+
+        border-top: solid 1px #A5B0CC;
+
+        .title {
+
+        }
+        .content {
+            color: #E4E7F0;
+            font-size: .9rem;
+
+            ul {
+                padding-left: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

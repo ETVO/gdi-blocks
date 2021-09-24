@@ -1,0 +1,58 @@
+@import './planta/block.scss';
+
+$control-icon-size: 25px;
+
+$img-size: 400px;
+
+.gdi-plantas {
+    background-color: #5C6373;
+    color: white;
+    
+    .thin-title h2 {
+        color: white;
+    }
+
+    .carousel {
+        
+        .carousel-control {
+            &-prev,
+            &-next {
+
+                .carousel-control-next-icon,
+                .carousel-control-prev-icon {
+                    color: white !important;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:767.99px) {
+    .gdi-carousel .carousel {
+        .controls {
+            display: flex;
+            margin-top: 10px;
+
+            .carousel-control {
+                &-prev,
+                &-next {
+                    position: relative;
+                    top: unset;
+                    bottom: unset;
+                    right: unset;
+                    left: unset;
+                       
+                }
+        
+                &-prev {
+                    margin-left: auto;
+                }
+        
+                &-next {
+                    margin-right: auto;
+                }
+            }
+        } 
+    }
+}

@@ -11,8 +11,8 @@ function render_block_ctafixed($attributes)
     
     ?>
         <section class="gdi-ctafixed">
-            <div class="inner d-flex overlay" style="background-image:url('<?php echo $image_url; ?>')">
-                <!-- <img src="<?php echo $image_url; ?>" alt=""> -->
+            <div class="inner d-flex">
+                <img src="<?php echo $image_url; ?>">
                 <div class="content text-center m-auto">
                     <div class="title">
                         <h1>

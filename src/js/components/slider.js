@@ -13,11 +13,10 @@
 
         const margin = 10;
 
-        var sliderUlWidth = (itemsPerSlide * slideWidth) + (itemsPerSlide + margin)*2;
+        var slideWidth = $('.slider').first().find('.item').first().width();
+        var slideHeight = $('.slider').first().find('.item').first().height();
 
-        var slideWidth = 400;
-        var slideHeight = 400;
-
+        var sliderUlWidth = (itemsPerSlide * slideWidth) + (itemsPerSlide * margin)*2;
         
         /**
          * Invocate functions when document.body is ready 
@@ -26,33 +25,40 @@
 
             var w = $(this).width();
 
-            // if(w >= 1000) {
-            //     itemsPerSlide = 4;
-            // }
-            // else if(w >= 700) {
-            //     itemsPerSlide = 3;
-            // }
-            // else if(w >= 400) {
-            //     itemsPerSlide = 2;
-            // }
-            // else {
-            //     itemsPerSlide = 1;
-            // } 
-
-            itemsPerSlide = 2;
-    
-            if(itemsPerSlide > 1) {
-                jumpPerClick = itemsPerSlide - 1;
-            }
-            else {
-                jumpPerClick = 1;
-            }
-
-            sliderUlWidth = (itemsPerSlide * slideWidth) + (itemsPerSlide * margin)*2;
-
             $('.slider').each(function(index, elem) {
+                var slideCount = $(elem).attr("data-gdi-count");
+                
+                if(w >= 1000) {
+                    itemsPerSlide = 4;
+                    if(slideCount)
+                        itemsPerSlide = slideCount;
+                }
+                else {
+                    if(w >= 700) {
+                        itemsPerSlide = 3;
+                    }
+                    else if(w >= 400) {
+                        itemsPerSlide = 2;
+                    }
+                    else {
+                        itemsPerSlide = 1;
+                    }
+                }
+        
+                if(itemsPerSlide > 1) {
+                    jumpPerClick = itemsPerSlide - 1;
+                }
+                else {
+                    jumpPerClick = 1;
+                }
+                
+                slideWidth = $(elem).find('.item').first().width();
+                slideHeight = $(elem).find('.item').first().height();
+                
+                sliderUlWidth = (itemsPerSlide * slideWidth) + (itemsPerSlide * margin)*2;
+
+
                 elem.style = "max-height: " + slideHeight + "px;";
-                $(elem).find('ul').style = "max-width: " + sliderUlWidth + "px;";
             })
         });
 

@@ -1,0 +1,36 @@
+@import './local/block';
+
+.gdi-referencias {
+
+    background-color: #F2F2F4;
+
+    
+    .content {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        .address {
+            color: #CC7E00 !important;
+        }
+    }
+
+    .map {
+        min-height: 100%;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media all and (max-width:991.99px) {
+    .gdi-referencias {
+        .content {
+            padding-right: unset;
+        }
+
+        .map {
+            min-height: 300px;
+        }
+    }
+}

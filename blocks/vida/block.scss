@@ -1,0 +1,41 @@
+.gdi-vida {
+
+    background-color: #E4E7F0;
+    
+    .content {
+
+        .title {
+            letter-spacing: 4.8px;
+            text-transform: uppercase;
+            .first {
+                color: #010C2A;
+                font-weight: 200;
+                margin-bottom: 0;
+            }
+            .second {
+                color: #CC7E00;
+                font-weight: 700;
+                margin-top: 0;
+            }
+        }
+
+        .hashtag {
+            h1, h2, h3, h4 {
+                font-size: 3rem;
+            }
+        }
+
+        .text {
+            color: #5C6373;
+            font-size: .9rem;
+        }
+    }
+
+    .gallery {
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

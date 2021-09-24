@@ -11,9 +11,11 @@ function render_block_citem($attributes)
     <?php if ($image_url) : ?>
         <div class="gdi-citem carousel-item">
             <img src="<?php echo $image_url; ?>" class="d-block w-100">
-            <div class="carousel-caption px-2 px-sm-3 py-2">
-                <?php echo $caption; ?>
-            </div>
+            <?php if($caption): ?>
+                <div class="carousel-caption px-2 px-sm-3 py-2">
+                    <?php echo $caption; ?>
+                </div>
+            <?php endif; ?>
         </div>
     <?php endif; ?>
 

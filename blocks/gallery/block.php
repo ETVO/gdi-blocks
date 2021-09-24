@@ -47,9 +47,11 @@ function render_block_gallery($attributes, $content)
                         ?>
                         <div class="item <?php echo $classname; ?>">
                             <img src="<?php echo $image['url']; ?>" alt="">
+                            <?php if($image['caption']): ?>
                             <div class="img-overlay">
                                 <?php echo $image['caption']; ?>
                             </div>
+                            <?php endif; ?>
                         </div>
                         <?php
                         

@@ -1,29 +1,29 @@
 <?php
 
-function render_block_slider($attributes)
+function render_block_plantas($attributes, $content)
 {
-    $images = $attributes['images'];
-    $title = $attributes['title'];
 
-    $title_class = 'thin-title';
-    if($title != '') {
-        $title_class = 'title';
-    }
-    else {
-        $title = 'Fotos do Empreendimento';
-    }
+    $title = 'Plantas';
 
-    $slideCount = 2;
+    $plantas = explode('<!-- planta -->', $content);
+
+    $slideCount = 3;
         
     $auto_slide = false;
-    $block_id = 'gdiSlider' . rand(0, 100);
+    $block_id = 'gdiPlantas' . rand(0, 100);
+
+    // exit;
 
     ob_start(); // Start HTML buffering
+
+    echo count($plantas)
+
     ?>
 
-        <section class="gdi-slider container col-md-9 col-lg-10 col-xl-8 px-2 py-5 mt-4">
+        <section class="gdi-plantas gdi-slider mt-4">
 
-            <div class="<?php echo $title_class ?> text-center mb-4">
+        <div class="container col-md-9 col-lg-10 col-xl-8 px-2 py-5 ">
+            <div class="thin-title text-center mb-4">
                 <h2>
                     <?php echo $title; ?>
                 </h2>
@@ -34,9 +34,11 @@ function render_block_slider($attributes)
                 id="<?php echo $block_id; ?>">
             
                 <div class="carousel-inner">
-                    <?php 
+                <?php 
                         $each = 0;
-                        for($i = 0; $i < count($images); $i++) {
+                        foreach($plantas as $planta) {
+
+                            if(empty(trim($planta))) continue;
                             if($each == 0) {
                                 ?>
                                 <div class="carousel-item">
@@ -45,11 +47,9 @@ function render_block_slider($attributes)
                                 
                             }
 
-                            $image = get_image_props($images, $i);
-
                             ?>
                             <div class="item-inner col-lg-<?php echo round(12 / $slideCount); ?>">
-                                <img class="slide-img" src="<?php echo $image['url'] ?>" alt="">
+                                <?php echo $planta; ?>
                             </div>
                             <?php
 
@@ -65,6 +65,14 @@ function render_block_slider($attributes)
                                 $each++;
                             }
                         } 
+                        
+                        if($each > 0) {
+                            $each = 0;
+                            ?>
+                                </div>
+                            </div>
+                            <?php
+                        }
                     ?>
                 </div>
                        
@@ -81,6 +89,7 @@ function render_block_slider($attributes)
                     </button>
                 </div>
             </div>
+        </div>
         </section>
 
     <?php

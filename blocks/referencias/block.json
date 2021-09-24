@@ -1,0 +1,45 @@
+{
+    "slug": "referencias",
+    "title": "Localização",
+    "desc": "Texto e imagem",
+    "icon": " bi bi-list-stars",
+    "categ": "gdiblock",
+    "usesInner": true,
+    "attrs": {
+        "title": {
+            "type": "string"
+        },
+        "address": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title",
+            "label": "Título"
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "address",
+            "label": "Endereço"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "gdiblock/local" ],
+            "label": "Locais"
+        }
+    ],
+    "children": [
+        {
+            "path": "local/"
+        }
+    ]
+}

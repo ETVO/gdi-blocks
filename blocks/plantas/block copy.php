@@ -49,7 +49,7 @@ function render_block_slider($attributes)
 
                             ?>
                             <div class="item-inner col-lg-<?php echo round(12 / $slideCount); ?>">
-                                <img class="slide-img" src="<?php echo $image['url'] ?>" alt="">
+                                <img src="<?php echo $image['url'] ?>" alt="">
                             </div>
                             <?php
 

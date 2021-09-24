@@ -1,0 +1,65 @@
+{
+    "slug": "vida",
+    "title": "A vida no...",
+    "desc": "Texto e imagem",
+    "icon": " bi bi-hash",
+    "categ": "gdiblock",
+    "attrs": {
+        "title1": {
+            "type": "string"
+        },
+        "title2": {
+            "type": "string"
+        },
+        "hashtag": {
+            "type": "string"
+        },
+        "text": {
+            "type": "string"
+        },
+        "images": {
+            "type": "array"
+        }
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Conteúdo"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title1",
+            "label": "Título 1"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "title2",
+            "label": "Título 2"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "hashtag",
+            "label": "Hashtag (somente texto)",
+            "help": "A '#' será inserida automaticamente"
+        },
+        {
+            "tag": "input",
+            "type": "rich",
+            "attr": "text",
+            "label": "Texto"
+        },
+        {
+            "tag": "title",
+            "title": "Grade de imagens"
+        },
+        {
+            "tag": "input",
+            "type": "gallery",
+            "attr": "images",
+            "label": "Imagens"
+        }
+    ]
+}

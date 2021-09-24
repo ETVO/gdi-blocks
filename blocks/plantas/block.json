@@ -1,0 +1,27 @@
+{
+    "slug": "plantas",
+    "title": "Plantas",
+    "desc": "Plantas do Empreendimento",
+    "icon": " bi bi-map-fill",
+    "categ": "gdiblock",
+    "usesInner": true,
+    "attrs": {
+    },
+    "edit": [
+        {
+            "tag": "title",
+            "title": "Plantas"
+        },
+        {
+            "tag": "input",
+            "type": "inner",
+            "blocks": [ "gdiblock/planta" ],
+            "label": "Plantas"
+        }
+    ],
+    "children": [
+        {
+            "path": "planta/"
+        }
+    ]
+}

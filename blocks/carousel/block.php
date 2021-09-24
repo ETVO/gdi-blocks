@@ -26,8 +26,8 @@ function render_block_carousel($attributes, $content)
 
             <div class="carousel slide" 
                 data-bs-ride="<?php echo ($auto_slide) ? "carousel" : "false" ?>" 
-                <?php echo ($auto_slide) ? 'data-bs-interval="'.$interval.'"' : ""; ?>" 
-                id="<?php echo $block_id; ?>">
+                data-bs-interval="<?php echo ($auto_slide) ? $interval : "false" ?>" 
+                    id="<?php echo $block_id; ?>">
             
                 <div class="carousel-inner">
                     <?php echo $content ?>

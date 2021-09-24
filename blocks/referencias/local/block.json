@@ -1,0 +1,29 @@
+{
+    "slug": "local",
+    "title": "Local",
+    "desc": "Texto e distância",
+    "icon": " bi bi-flag",
+    "categ": "gdiblock",
+    "attrs": {
+        "name": {
+            "type": "string"
+        },
+        "distance": {
+            "type": "string"
+        }
+    },
+    "edit": [
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "name",
+            "label": "Nome"        
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "distance",
+            "label": "Distância"        
+        }
+    ]
+}
