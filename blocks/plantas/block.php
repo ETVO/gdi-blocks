@@ -16,8 +16,6 @@ function render_block_plantas($attributes, $content)
 
     ob_start(); // Start HTML buffering
 
-    echo count($plantas)
-
     ?>
 
         <section class="gdi-plantas gdi-slider mt-4">

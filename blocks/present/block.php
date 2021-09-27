@@ -43,7 +43,7 @@ function render_block_present($attributes, $content)
     ?>
 
         <section class="gdi-present">
-            <div class="container col-lg-10 col-xl-8 px-3">
+            <div class="container col-lg-11 col-xl-9 px-3">
                 <div class="d-inline d-lg-flex m-auto">
                     <?php if($title): ?>
                         <div class="title m-auto text-center text-lg-start">

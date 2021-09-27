@@ -5,8 +5,6 @@
  * @subpackage GDI-Blocks
  */
 
-// import './components/slider';
-
  (jQuery)(
     function($) {
 
@@ -51,8 +49,8 @@
                 var indicators = '<div class="carousel-indicators">';
 
                 if($items.length <= 1) {
-                    $('.carousel-control-prev').hide();
-                    $('.carousel-control-next').hide();
+                    $(this).find('.carousel-control-prev').get(0).hide();
+                    $(this).find('.carousel-control-next').get(0).hide();
                 }
 
                 for (var i = 0; i < $items.length; i++) {
