@@ -29,28 +29,29 @@ $img-size: 400px;
 }
 
 @media all and (max-width:767.99px) {
-    .gdi-carousel .carousel {
-        .controls {
-            display: flex;
-            margin-top: 10px;
+    .gdi-slider {
+        .carousel {
 
             .carousel-control {
                 &-prev,
                 &-next {
-                    position: relative;
-                    top: unset;
-                    bottom: unset;
-                    right: unset;
-                    left: unset;
+
+                    .carousel-control-next-icon,
+                    .carousel-control-prev-icon {
+
+                        color: #010c2a !important;
+                        background-color: white;
+                        border-radius: 5px;
+                    }
                        
                 }
         
                 &-prev {
-                    margin-left: auto;
+                    left: 25px;
                 }
         
                 &-next {
-                    margin-right: auto;
+                    right: 25px;
                 }
             }
         } 

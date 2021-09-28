@@ -12,17 +12,16 @@ function render_block_slider($attributes)
         $title = 'Fotos do Empreendimento';
     }
 
-    $slides_xl = 3;
+    $slides_xl = 2;
     $slides_lg = 2;
     $slides_xs = 1;
 
-    $auto_slide = false;
     $block_id = 'gdiSlider' . rand(0, 100);
 
     ob_start(); // Start HTML buffering
 ?>
 
-    <section class="gdi-slider container col-md-8 col-lg-9 col-xl-10 px-2 py-5 mt-4">
+    <section class="gdi-slider container col-md-8 col-lg-9 col-xl-8 px-2 py-5 mt-4">
         <div class="<?php echo $title_class ?> text-center mb-4">
             <h2>
                 <?php echo $title; ?>
@@ -77,7 +76,8 @@ function generate_slider_inner($images, $slide_count, $bp)
     $display_class = '';
 
     if(trim($start) != '') {
-        $display_class = "d-none";
+        $display_class = "d-toggle";
+        $display_class .= " d-none";
         $display_class .= " d-$start-block";
 
         if(trim($stop) != '') {
@@ -85,7 +85,8 @@ function generate_slider_inner($images, $slide_count, $bp)
         }
     }
     else if(trim($stop) != '') {
-        $display_class = "d-block";
+        $display_class = "d-toggle";
+        $display_class .= " d-block";
         $display_class .= " d-$stop-none";
     }
 

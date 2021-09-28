@@ -160,6 +160,27 @@
 
         }
 
+        function toggleCarouselInner() {
+            $(window).on('load resize', function() {
+                $('.carousel').each((index, elem) => {
+                    $(elem).find('.carousel-inner.d-toggle').each((index, elem) => {
+                        content = elem.innerHTML; 
+
+                        if($(elem).is(':visible')) {
+                            if(content.substring(0, 4) == '<!--') {
+                                elem.innerHTML = content.substring(4, content.length - 4);
+                            }
+                        }
+                        else {
+                            if(content.substring(0, 4) != '<!--') {
+                                elem.innerHTML = '<!--' + content + '-->';
+                            }
+                        }
+                    });
+                });
+            });
+        }
+
         /**
          * Invocate functions when document.body is ready 
          */
@@ -167,6 +188,7 @@
             // setSVGViewBox();
             generateCarousel();
             syncTabsWithContent();
+            toggleCarouselInner();
         });
     }
 )
