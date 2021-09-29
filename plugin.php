@@ -91,7 +91,7 @@ final class GDI_Blocks {
         // Registering the blocks.css for frontend + backend
         wp_enqueue_style(
             'plugin-blocks-css', 
-            $dir . 'blocks.css',
+            $dir . 'blocks.min.css',
             is_admin() ? array('wp-editor') : null,
             null
         );
@@ -108,7 +108,7 @@ final class GDI_Blocks {
         // Registering the blocks.js file in the dist folder
         wp_enqueue_script(
             'plugin-front-js',
-            $dir . 'front.js',
+            $dir . 'front.min.js',
             array(),
             null,
             true
@@ -126,7 +126,7 @@ final class GDI_Blocks {
         // Registering the editor.css for backend
         wp_enqueue_style(
             'plugin-editor-css', 
-            $dir . 'editor.css',
+            $dir . 'editor.min.css',
             array('wp-edit-blocks'),
             null
         );
@@ -143,7 +143,7 @@ final class GDI_Blocks {
         // Registering the blocks.js file in the dist folder
         wp_enqueue_script(
             'plugin-blocks-js',
-            $dir . 'blocks.js',
+            $dir . 'blocks.min.js',
             array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor', 'wp-components'),
             null,
             true
