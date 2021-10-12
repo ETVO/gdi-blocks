@@ -10,13 +10,16 @@ function render_block_gallery($attributes, $content)
     $modal_id = "gdiGalleryModal" . $rand;
     $modal_carousel_id = "gdiGalleryModalCarousel" . $rand;
 
+    $count = count($images);
+    if($count > 9) $count = 9; 
+
     if(!$images) return;
     ob_start(); // Start HTML buffering
     ?>
 
-        <section class="gdi-gallery py-3">
+        <section class="gdi-gallery py-4">
 
-            <div class="container py-5">
+            <div class="container py-5 col-lg-9 col-xl-7">
 
                 <div class="thin-title text-center mb-3">
                     <h2>
@@ -26,42 +29,26 @@ function render_block_gallery($attributes, $content)
                 
                 <div class="items row g-3 w-100 m-0">
                     <?php 
-                    for($i = 0; $i < count($images); $i++){
-                        if($i == 4) break;
+                    for($i = 0; $i < $count; $i++) {
                         $image = get_image_props($images, $i);
-
-                        $classname = ' col-12 col-md-4';
-                        if($i == 0) {
-                            $classname = ' feat col-12 col-lg-8';
-                        }
-                        if($i > 0) {
-                            $classname = ' col-12 col-md-6 col-lg-12';
-                            if($i == 1) {
-                                ?>
-                                <div class="col-12 col-lg-4">
-                                    <div class="row g-3">
-                                <?php
-                            } 
-                        }
                         
                         ?>
-                        <div class="item <?php echo $classname; ?>">
-                            <img src="<?php echo $image['url']; ?>" alt="">
-                            <?php if($image['caption']): ?>
-                            <div class="img-overlay">
-                                <?php echo $image['caption']; ?>
-                            </div>
-                            <?php endif; ?>
-                        </div>
-                        <?php
-                        
-                        if($i == 3) {
-                            ?>
+
+                        <div class="item col-12 col-md-6 col-lg-4">
+                            <div class="item-inner">
+                                <img src="<?php echo $image['url']; ?>" alt="">
+                                <?php if($image['caption']): ?>
+                                <div class="img-overlay">
+                                    <span>
+                                        <?php echo $image['caption']; ?>
+                                    </span>
                                 </div>
+                                <?php endif; ?>
                             </div>
-                            <?php
-                        }
-                    } 
+                        </div>
+
+                        <?php
+                    }
                     ?>
                 </div>
 

@@ -4,55 +4,62 @@
     .items {
         .item {
             position: relative;
-            
-            cursor: help;
+            padding: 0 .5rem;
+            cursor: pointer;
 
-            img {
+            .item-inner {
                 height: 200px;
-                width: 100%;
-                object-fit: cover;
 
-            }
-            &.feat {
+                position: relative;
                 img {
-                    height: 100%;    
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    inset: 0;
+    
                 }
-            }
-
-            .img-overlay {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: rgba(255, 255, 255, 0.8);
-                font-size: .9rem;
-                padding: 10px 20px;
-
-                opacity: 0;
-                transition: opacity .2s;
-            }
-
-            &:hover, &:active, &:focus {
-                
+                &.feat {
+                    img {
+                        height: 100%;    
+                    }
+                }
+    
                 .img-overlay {
-                    opacity: 1;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+    
+                    inset: 0;
+    
+                    opacity: 0;
+    
+                    transition: opacity .1s;
+    
+                    background-color: rgba(#CC7E00, .7);
+    
+                    display: flex;
+                    padding: 10px 20px;
+    
+                    span {
+                        margin: auto;
+                        font-size: calc(.5rem + 1vw);
+                        line-height: 1.25;
+                        font-weight: 600;
+                        color: white;
+                        text-align: center;
+                    }
+    
+    
                 }
+    
+                &:hover, &:active, &:focus {
+                    .img-overlay {
+                        opacity: 1;
+                    }
+                }
+
             }
+
         }
     }
-}
-
-@media all and (max-width:1199.99px) {
-}
-
-@media all and (max-width:991.99px) {
-    
-}
-
-@media all and (max-width:767.99px) {
-
-}
-
-@media all and (max-width:575.99px) {
-    
 }

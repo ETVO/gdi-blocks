@@ -6,7 +6,11 @@ function render_block_resumo($attributes, $content)
     $title2 = $attributes['title2'];
     $text = $attributes['text'];
     $image_url = $attributes['image'];
+    $info_text = $attributes['infoText'];
     $date = $attributes['date'];
+
+    if(empty(trim($info_text)))
+        $info_text = 'Entregue em';
 
     $caracters = array(
         'medidas',
@@ -61,7 +65,7 @@ function render_block_resumo($attributes, $content)
                             </div>
                             <div class="info my-auto">
                                 <small>
-                                    Entregue em
+                                    <?php echo $info_text; ?>
                                 </small>
                                 <div class="date fw-bold">
                                     <?php echo $date; ?>

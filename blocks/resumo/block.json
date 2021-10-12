@@ -17,6 +17,9 @@
         "image": {
             "type": "string"
         },
+        "infoText": {
+            "type": "string"
+        },
         "date": {
             "type": "string"
         }
@@ -57,6 +60,13 @@
         {
             "tag": "title",
             "title": "Informações"
+        },
+        {
+            "tag": "input",
+            "type": "text",
+            "attr": "infoText",
+            "label": "Texto de entrega",
+            "placeholder": "Ex.: Entregue em"
         },
         {
             "tag": "input",
