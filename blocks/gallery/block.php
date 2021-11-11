@@ -11,7 +11,7 @@ function render_block_gallery($attributes, $content)
     $modal_carousel_id = "gdiGalleryModalCarousel" . $rand;
 
     $count = count($images);
-    if($count > 9) $count = 9; 
+    if($count > 6) $count = 6; 
 
     if(!$images) return;
     ob_start(); // Start HTML buffering
@@ -19,7 +19,7 @@ function render_block_gallery($attributes, $content)
 
         <section class="gdi-gallery py-4">
 
-            <div class="container py-5 col-lg-9 col-xl-7">
+            <div class="container py-5 col-lg-11 col-xl-9">
 
                 <div class="thin-title text-center mb-3">
                     <h2>
@@ -59,7 +59,7 @@ function render_block_gallery($attributes, $content)
                                 data-bs-target="#<?php echo $modal_id; ?>" 
                                 data-bs-toggle="modal" 
                                 data-bs-dismiss="modal">
-                                ver todos
+                                ver todas
                             </button>
                         </div>
                     </div>

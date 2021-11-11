@@ -8,7 +8,7 @@
             cursor: pointer;
 
             .item-inner {
-                height: 200px;
+                height: 300px;
 
                 position: relative;
                 img {
@@ -35,18 +35,18 @@
     
                     transition: opacity .1s;
     
-                    background-color: rgba(#CC7E00, .7);
+                    background: linear-gradient(rgba(#010C2A, 0) 0%, rgba(#010C2A, 0.8) 100%);
     
                     display: flex;
-                    padding: 10px 20px;
     
                     span {
-                        margin: auto;
-                        font-size: calc(.5rem + 1vw);
+                        margin: 1rem;
+                        margin-top: auto;
+                        font-size: 16px;
                         line-height: 1.25;
-                        font-weight: 600;
+                        font-weight: 500;
                         color: white;
-                        text-align: center;
+                        // text-align: center;
                     }
     
     
